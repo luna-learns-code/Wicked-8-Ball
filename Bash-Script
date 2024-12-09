@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+#ask 8Ball question
+echo "...*sighs* I'm what they call a 'Magic 8 Ball'. I spit answers to your insignificant questions. What do you fucking want from me?"
+read question
+echo "Well I can barely make sense of your shitty typing, but I think you're fucking asking me '$question'"
+
+#8Ball answers
+myArray=("Yeah no shit!" "A hundred fucking times yes" "Obviously" "The only thing that's more positive than my answer is your aunt's chlamydia test" "I'm too high, ask again?" "Honey, what drugs are you on?!" "Would rather shit in my hands and clap than answer that" "... Bless your heart." "You can fuck that sky high" "brb, gotta google how to crush someone's dream without making them cry" "No way, Jose")
+arrayLength=${#myArray[@]}
+randomIndex=$((RANDOM % arrayLength))
+randomElement=${myArray[$randomIndex]}
+
+#pick answer
+echo "Thinking..."
+random_number=$(( (RANDOM % 10) + 1 ))
+sleep $random_number
+echo "Wicked 8Ball says $randomElement"
